@@ -458,13 +458,7 @@ ol {
 
 .header {
 	background: #ffffff;
-	position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #fff;
-    z-index: 100;
-    transition: top 0.3s;
+
 }
 
 .header__top {
