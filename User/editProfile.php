@@ -46,7 +46,9 @@
                 <a href="login.html">Back to Login</a>
                 </p>
         </div>
+        
     </div>
+
     </div>
 
     <!-- Include Bootstrap JS (optional) -->
