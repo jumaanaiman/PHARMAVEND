@@ -2,310 +2,233 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>DarkPan - Bootstrap 5 Admin Template</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+  <title>Components / Accordion - NiceAdmin Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet"> 
-    
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
 
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/products.css" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
 
 
+ 
 </head>
 
 <body>
-    <div class="container-fluid position-relative d-flex p-0">
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div>
-        <!-- Spinner End -->
 
+  <!-- ======= Header ======= -->
+  <div id="headerNavBarContainer"></div> 
+  <!-- End Header -->
 
-        <!-- Sidebar Start -->
-        <div id="sidenavContainer"></div> 
-        <!-- Sidebar End -->
+  <!-- ======= Sidebar ======= -->
+  <div id="sidenavContainer"></div> <!-- End Sidebar-->
 
-
-        <!-- Content Start -->
-        <div class="content">
-            <!-- Navbar Start -->
-          <div id="headerNavBarContainer"></div> 
-            <!-- Navbar End --> 
-            
-            <div class="container-fluid pt-4 px-4">
-                <div class="bg-secondary text-center rounded p-4">
-                    <div class="d-flex align-items-center justify-content-between">
-                        <h6 class="mb-0">Vending Machine 1 Products</h6>
-                        <a href="#" id="OPENProductModal" >Add Product to Vending Machine</a>
-                    </div>
-                </div>
-            </div>
-            <div class="container d-flex justify-content-center mt-50 mb-50  pt-4">
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="">
-                            <div class="card card-body bg-secondary rounded mt-3">
-                                <div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
-                                    <div class="mr-2 mb-3 mb-lg-0">
-                                        
-                                            <img src="img/toothbrush.png" width="150" height="150" alt="">
-                                       
-                                    </div>
-    
-                                    <div class="media-body proudect-item">
-                                        <h6 >
-                                            <a href="#" data-abc="true" class="text-white" >SparkleFresh Deluxe Toothbrush</a>
-                                        </h6>
-    
-                                        <p class="mb-3 text-gray">Product ID:1</p>
-    
-                                        <p class="mb-3 text-gray">Description</p>
-    
-                                        <p class="mb-3 text-gray">2.5 JD</p>
-                                        <p class="mb-3 text-gray">Qaunity in Stock : 6 </p>
-                                    
-    
-                                    </div>
-    
-                                    <div class="mt-3 mt-lg-0 ml-lg-3 text-center">
-                                         
-                                        <button type="button" class="btn btn-sm btn-light m-2">Restock</button> 
-                                        <button class="btn btn-sm btn-primary">Delete</button>
-                                        <button type="button" class="btn btn-sm btn-light m-2">Edit product details</button>
-                                    </div>
-                                </div>
-                            </div>   
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="">
-                            <div class="card card-body bg-secondary rounded mt-3">
-                                <div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
-                                    <div class="mr-2 mb-3 mb-lg-0">
-                                        
-                                            <img src="img/toothbrush.png" width="150" height="150" alt="">
-                                       
-                                    </div>
-    
-                                    <div class="media-body proudect-item">
-                                        <h6 >
-                                            <a href="#" data-abc="true" class="text-white" >SparkleFresh Deluxe Toothbrush</a>
-                                        </h6>
-    
-                                        <p class="mb-3 text-gray">Product ID:1</p>
-    
-                                        <p class="mb-3 text-gray">Description</p>
-    
-                                        <p class="mb-3 text-gray">2.5 JD</p>
-                                        <p class="mb-3 text-gray">Qaunity in Stock : 6 </p>
-                                    
-    
-                                    </div>
-    
-                                    <div class="mt-3 mt-lg-0 ml-lg-3 text-center">
-                                         
-                                        <button type="button" class="btn btn-sm btn-light m-2">Restock</button> 
-                                        <button class="btn btn-sm btn-primary">Delete</button>
-                                        <button type="button" class="btn btn-sm btn-light m-2">Edit product details</button>
-                                    </div>
-                                </div>
-                            </div>   
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="">
-                            <div class="card card-body bg-secondary rounded mt-3">
-                                <div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
-                                    <div class="mr-2 mb-3 mb-lg-0">
-                                        
-                                            <img src="img/toothbrush.png" width="150" height="150" alt="">
-                                       
-                                    </div>
-    
-                                    <div class="media-body proudect-item">
-                                        <h6 >
-                                            <a href="#" data-abc="true" class="text-white" >SparkleFresh Deluxe Toothbrush</a>
-                                        </h6>
-    
-                                        <p class="mb-3 text-gray">Product ID:1</p>
-    
-                                        <p class="mb-3 text-gray">Description</p>
-    
-                                        <p class="mb-3 text-gray">2.5 JD</p>
-                                        <p class="mb-3 text-gray">Qaunity in Stock : 6 </p>
-                                    
-    
-                                    </div>
-    
-                                    <div class="mt-3 mt-lg-0 ml-lg-3 text-center">
-                                         
-                                        <button type="button" class="btn btn-sm btn-light m-2">Restock</button> 
-                                        <button class="btn btn-sm btn-primary">Delete</button>
-                                        <button type="button" class="btn btn-sm btn-light m-2">Edit product details</button>
-                                    </div>
-                                </div>
-                            </div>   
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="">
-                            <div class="card card-body bg-secondary rounded mt-3">
-                                <div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
-                                    <div class="mr-2 mb-3 mb-lg-0">
-                                        
-                                            <img src="img/toothbrush.png" width="150" height="150" alt="">
-                                       
-                                    </div>
-    
-                                    <div class="media-body proudect-item">
-                                        <h6 >
-                                            <a href="#" data-abc="true" class="text-white" >SparkleFresh Deluxe Toothbrush</a>
-                                        </h6>
-    
-                                        <p class="mb-3 text-gray">Product ID:1</p>
-    
-                                        <p class="mb-3 text-gray">Description</p>
-    
-                                        <p class="mb-3 text-gray">2.5 JD</p>
-                                        <p class="mb-3 text-gray">Qaunity in Stock : 6 </p>
-                                    
-    
-                                    </div>
-    
-                                    <div class="mt-3 mt-lg-0 ml-lg-3 text-center">
-                                         
-                                        <button type="button" class="btn btn-sm btn-light m-2">Restock</button> 
-                                        <button class="btn btn-sm btn-primary">Delete</button>
-                                        <button type="button" class="btn btn-sm btn-light m-2">Edit product details</button>
-                                    </div>
-                                </div>
-                            </div>   
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-            
-            </body>
-            </html> 
-            <!-- Footer Start -->
-            <div id="footerContainer"></div> 
-        
-            <!-- Footer End -->
-        </div>
-
-        <!-- Content End -->
-
-        <div class="modal" id="ProductModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <!-- <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Add Vending Machines</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body"> 
-                  <p>Add your vending machine details here.</p>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                </div> -->
-                <div class="row gp-4">
-                    <div class="col-sm-12 col-xl-12">
-                        <div class="bg-secondary rounded h-100 p-4">
-                            <h6 class="mb-4">Add a new Product </h6>
-                            <form>
-                                <div class="row mb-3">
-                                    <label for="inputproductname" class="col-sm-2 col-form-label">Product Name</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="inputproductname">
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <label for="inputproductdescription" class="col-sm-2 col-form-label">Product Description</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="inputproductdescription">
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <label for="inputproductdescription" class="col-sm-2 col-form-label">Product Price (JD)</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="inputproductdescription">
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <label for="inputproductdescription" class="col-sm-2 col-form-label">Product Quantity </label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="inputproductdescription">
-                                    </div>
-                                </div>
-                                <div class="row justify-content-center">
-                                    <div class="col-8 center-button-model">
-                                        <button type="submit" class="btn btn-primary btn-sm">Add  </button> 
-                                        <button type="button" class="btn btn-light btn-sm" data-bs-dismiss="modal">Close</button>
-                                        
-                                    </div>
-                                </div>
-                               
-                            </form>
-                        </div>
-                    </div>
-                    </div>
-
-        
-                </div>
-              </div>
-            </div>
+  <main id="main" class="main">
+  
+    <div class="pagetitle">
+      <h1>Vending Machine 1 Products </h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="vendingMachines.html">Vending Machines</a> </li>
+          <li class="breadcrumb-item active">Products</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+   
+  <section class="section">  
+    <div class="container-fluid pt-4 px-4">
+      <div class="bg-secondary text-center rounded p-4">
+          <div class="d-flex align-items-center justify-content-between">
+              <h6 class="mb-0">Vending Machine 1 Products</h6>
+              <a href="#" id="OPENProductModal" >Add Product to Vending Machine</a>
           </div>
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-    </div>
+      </div>
+  </div>
+  <div class="container d-flex justify-content-center mt-50 mb-50  pt-4">
+      <div class="row">
+          <div class="col-md-3">
+              <div class="">
+                  <div class="card card-body bg-secondary rounded mt-3">
+                      <div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
+                          <div class="mr-2 mb-3 mb-lg-0">
+                              
+                                  <img src="img/toothbrush.png" width="150" height="150" alt="">
+                             
+                          </div>
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/chart/chart.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+                          <div class="media-body proudect-item">
+                              <h6 >
+                                  <a href="#" data-abc="true" class="text-white" >SparkleFresh Deluxe Toothbrush</a>
+                              </h6>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-    <script src="js/shared.js"></script>
-    <script>
-        // JavaScript to open modal when clicking on the link
-        document.getElementById('OPENProductModal').addEventListener('click', function() {
-          var myModal = new bootstrap.Modal(document.getElementById('ProductModal'));
-          myModal.show();
-        });
-      </script>
+                              <p class="mb-3 text-gray">Product ID:1</p>
+
+                              <p class="mb-3 text-gray">Description</p>
+
+                              <p class="mb-3 text-gray">2.5 JD</p>
+                              <p class="mb-3 text-gray">Qaunity in Stock : 6 </p>
+                          
+
+                          </div>
+
+                          <div class="mt-3 mt-lg-0 ml-lg-3 text-center">
+                               
+                              <button type="button" class="btn btn-sm btn-light m-2">Restock</button> 
+                              <button class="btn btn-sm btn-primary">Delete</button>
+                              <button type="button" class="btn btn-sm btn-light m-2">Edit product details</button>
+                          </div>
+                      </div>
+                  </div>   
+              </div>
+          </div>
+          <div class="col-md-3">
+              <div class="">
+                  <div class="card card-body bg-secondary rounded mt-3">
+                      <div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
+                          <div class="mr-2 mb-3 mb-lg-0">
+                              
+                                  <img src="img/toothbrush.png" width="150" height="150" alt="">
+                             
+                          </div>
+
+                          <div class="media-body proudect-item">
+                              <h6 >
+                                  <a href="#" data-abc="true" class="text-white" >SparkleFresh Deluxe Toothbrush</a>
+                              </h6>
+
+                              <p class="mb-3 text-gray">Product ID:1</p>
+
+                              <p class="mb-3 text-gray">Description</p>
+
+                              <p class="mb-3 text-gray">2.5 JD</p>
+                              <p class="mb-3 text-gray">Qaunity in Stock : 6 </p>
+                          
+
+                          </div>
+
+                          <div class="mt-3 mt-lg-0 ml-lg-3 text-center">
+                               
+                              <button type="button" class="btn btn-sm btn-light m-2">Restock</button> 
+                              <button class="btn btn-sm btn-primary">Delete</button>
+                              <button type="button" class="btn btn-sm btn-light m-2">Edit product details</button>
+                          </div>
+                      </div>
+                  </div>   
+              </div>
+          </div>
+          <div class="col-md-3">
+              <div class="">
+                  <div class="card card-body bg-secondary rounded mt-3">
+                      <div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
+                          <div class="mr-2 mb-3 mb-lg-0">
+                              
+                                  <img src="img/toothbrush.png" width="150" height="150" alt="">
+                             
+                          </div>
+
+                          <div class="media-body proudect-item">
+                              <h6 >
+                                  <a href="#" data-abc="true" class="text-white" >SparkleFresh Deluxe Toothbrush</a>
+                              </h6>
+
+                              <p class="mb-3 text-gray">Product ID:1</p>
+
+                              <p class="mb-3 text-gray">Description</p>
+
+                              <p class="mb-3 text-gray">2.5 JD</p>
+                              <p class="mb-3 text-gray">Qaunity in Stock : 6 </p>
+                          
+
+                          </div>
+
+                          <div class="mt-3 mt-lg-0 ml-lg-3 text-center">
+                               
+                              <button type="button" class="btn btn-sm btn-light m-2">Restock</button> 
+                              <button class="btn btn-sm btn-primary">Delete</button>
+                              <button type="button" class="btn btn-sm btn-light m-2">Edit product details</button>
+                          </div>
+                      </div>
+                  </div>   
+              </div>
+          </div>
+          <div class="col-md-3">
+              <div class="">
+                  <div class="card card-body bg-secondary rounded mt-3">
+                      <div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
+                          <div class="mr-2 mb-3 mb-lg-0">
+                              
+                                  <img src="img/toothbrush.png" width="150" height="150" alt="">
+                             
+                          </div>
+
+                          <div class="media-body proudect-item">
+                              <h6 >
+                                  <a href="#" data-abc="true" class="text-white" >SparkleFresh Deluxe Toothbrush</a>
+                              </h6>
+
+                              <p class="mb-3 text-gray">Product ID:1</p>
+
+                              <p class="mb-3 text-gray">Description</p>
+
+                              <p class="mb-3 text-gray">2.5 JD</p>
+                              <p class="mb-3 text-gray">Qaunity in Stock : 6 </p>
+                          
+
+                          </div>
+
+                          <div class="mt-3 mt-lg-0 ml-lg-3 text-center">
+                               
+                              <button type="button" class="btn btn-sm btn-light m-2">Restock</button> 
+                              <button class="btn btn-sm btn-primary">Delete</button>
+                              <button type="button" class="btn btn-sm btn-light m-2">Edit product details</button>
+                          </div>
+                      </div>
+                  </div>   
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <div id="footerContainer"></div><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/shared.js"></script>
+
 </body>
 
 </html>
