@@ -1,10 +1,5 @@
 /******************************************************************
-  Template Name: Male Fashion
-  Description: Male Fashion - ecommerce teplate
-  Author: Colorib
-  Author URI: https://www.colorib.com/
-  Version: 1.0
-  Created: Colorib 
+  
 ******************************************************************/
 
 /*------------------------------------------------------------------
@@ -312,8 +307,8 @@ ol {
 	font-weight: 700;
 	text-transform: uppercase;
 	padding: 14px 30px;
-	color: #ffffff;
-	background: #000000;
+	color: #000000;
+	background: #ffffff;
 	letter-spacing: 4px;
 }
 
@@ -463,18 +458,32 @@ ol {
 /*---------------------
   Header
 -----------------------*/
+body:not(.no-padding) {
+	margin: 0;
+	padding-top: 120px; /* Add padding to the body to prevent content from being overlapped by the fixed header */
+}
 
 .header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
 	background: #ffffff;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	z-index: 9999;
 }
 
 .header__top {
+<<<<<<< HEAD
+	background: #e1f6ff;
+=======
 	background: #0b465c;
+>>>>>>> 2faad95f948d357e3b72e1fede9fed5e4339bb58
 	padding: 10px 0;
 }
 
 .header__top__left p {
-	color: #ffffff;
+	color: #000000;
 	margin-bottom: 0;
 }
 
@@ -488,7 +497,7 @@ ol {
 }
 
 .header__top__links a {
-	color: #ffffff;
+	color: #000000;
 	font-size: 13px;
 	text-transform: uppercase;
 	letter-spacing: 2px;
@@ -554,6 +563,7 @@ ol {
 
 .header__logo {
 	padding: 30px 0;
+	
 }
 
 .header__logo a {
@@ -2207,7 +2217,11 @@ ol {
 -----------------------*/
 
 .breadcrumb-option {
+<<<<<<< HEAD
+	background: #e1f6ff;
+=======
 	background: #e1f6ff;;
+>>>>>>> 2faad95f948d357e3b72e1fede9fed5e4339bb58
 	padding: 40px 0;
 }
 
@@ -2633,8 +2647,8 @@ ol {
 }
 
 .cart__total {
-	background: #f3f2ee;
-	padding: 35px 40px 40px;
+	background: #e1f6ff;
+	padding: 35px 40px 40px;F
 }
 
 .cart__total h6 {
