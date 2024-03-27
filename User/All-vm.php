@@ -64,6 +64,7 @@
     <!-- Offcanvas Menu End -->
 
     <!-- Header Section Begin -->
+<<<<<<< HEAD
     <header class="header">
         <div class="header__top">
             <div class="container">
@@ -129,6 +130,11 @@
             <div class="canvas__open"><i class="fa fa-bars"></i></div>
         </div>
     </header>
+=======
+        <?php
+        include('header.php');
+        ?>
+>>>>>>> eb47125c55d258ce64357f2ba6e69a74d8e2390d
     <!-- Header Section End -->
 
     <!-- Breadcrumb Section Begin -->
