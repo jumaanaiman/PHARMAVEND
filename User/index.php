@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -11,8 +10,7 @@
     <title>PharmaVend| Template</title>
 
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
-    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- Css Styles -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -23,7 +21,7 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
-    
+
 </head>
 
 <body>
@@ -64,7 +62,7 @@
 
     <!-- Header Section Begin -->
     <?php
-      include('header.php');
+    include('header.php');
     ?>
     <!-- Header Section End -->
 
@@ -76,10 +74,10 @@
                     <div class="row">
                         <div class="col-xl-5 col-lg-7 col-md-8">
                             <div class="hero__text">
-                                
+
                                 <h2 style="color: white;
                                 text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;">Welcome to PharmaVend</h2>
-                                
+
                                 <a href="#" class="primary-btn">Shop now <span class="arrow_right"></span></a>
                             </div>
                         </div>
@@ -91,12 +89,12 @@
                     <div class="row">
                         <div class="col-xl-5 col-lg-7 col-md-8">
                             <div class="hero__text">
-                               
+
                                 <h2 style="color: white;
                                 text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;">Discover Convenience and Accessibility</h2>
-                                
+
                                 <a href="#" class="primary-btn">Shop now <span class="arrow_right"></span></a>
-                                
+
                             </div>
                         </div>
                     </div>
@@ -106,94 +104,94 @@
     </section>
     <!-- Hero Section End -->
 
-   <!-- Latest Blog Section Begin -->
-   <section class="latest spad">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-             <!-- <div class="section-title">
+    <!-- Latest Blog Section Begin -->
+    <section class="latest spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- <div class="section-title">
                     <h2></h2>
                 </div> -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="blog__item">
+                        <div class="blog__item__pic set-bg" data-setbg="img/blog/medicine.jpg"></div>
+                        <div class="blog__item__text">
+                            <span><img src="img/icon/calendar.png" alt=""></span>
+                            <h5>Medicines</h5>
+                            <a href="#">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="blog__item">
+                        <div class="blog__item__pic set-bg" data-setbg="img/blog/persCare.jpg"></div>
+                        <div class="blog__item__text">
+                            <span><img src="img/icon/calendar.png" alt=""> </span>
+                            <h5>Personal Care</h5>
+                            <a href="#">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="blog__item">
+                        <div class="blog__item__pic set-bg" data-setbg="img/blog/supp.jpg"></div>
+                        <div class="blog__item__text">
+                            <span><img src="img/icon/calendar.png" alt=""></span>
+                            <h5>Supplements and Vitamins</h5>
+                            <a href="#">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Latest Blog Section End -->
+
+
+    <!-- Map Begin -->
+    <div class="container">
+        <div class="section-title">
+            <h2>Find Nearest Vending Machine</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Map container -->
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d111551.9926412813!2d-90.27317134641879!3d38.606612219170856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited%20States!5e0!3m2!1sen!2sbd!4v1597926938024!5m2!1sen!2sbd" height="500" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="blog__item">
-                    <div class="blog__item__pic set-bg" data-setbg="img/blog/medicine.jpg"></div>
-                    <div class="blog__item__text">
-                        <span><img src="img/icon/calendar.png" alt=""></span>
-                        <h5>Medicines</h5>
-                        <a href="#">Read More</a>
+            <div class="col-md-12">
+                <!-- User input section -->
+
+                <form method="post">
+                    <div class="form-group">
+                        <label for="location">Your Location:</label>
+                        <input type="text" class="form-control" name="locationInput" placeholder="Enter your location">
                     </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="blog__item">
-                    <div class="blog__item__pic set-bg" data-setbg="img/blog/persCare.jpg"></div>
-                    <div class="blog__item__text">
-                        <span><img src="img/icon/calendar.png" alt=""> </span>
-                        <h5>Personal Care</h5>
-                        <a href="#">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="blog__item">
-                    <div class="blog__item__pic set-bg" data-setbg="img/blog/supp.jpg"></div>
-                    <div class="blog__item__text">
-                        <span><img src="img/icon/calendar.png" alt=""></span>
-                        <h5>Supplements and Vitamins</h5>
-                        <a href="#">Read More</a>
-                    </div>
-                </div>
+                    <button type="submit" class="btn btn-primary" name="findMachine" style="background-color: black; color: white;border-color: white;">Find Nearest Machine</button>
+                </form>
+
             </div>
         </div>
     </div>
-</section>
-<!-- Latest Blog Section End -->
+    <!-- Map End -->
 
 
-     <!-- Map Begin -->
-     <div class="container">
-        <div class="section-title">
-          <h2>Find Nearest Vending Machine</h2>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <!-- Map container -->
-            <div class="map">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d111551.9926412813!2d-90.27317134641879!3d38.606612219170856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited%20States!5e0!3m2!1sen!2sbd!4v1597926938024!5m2!1sen!2sbd" height="500" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <!-- User input section -->
-      
-            <form method="post">
-              <div class="form-group">
-                <label for="location">Your Location:</label>
-                <input type="text" class="form-control" name="locationInput" placeholder="Enter your location">
-              </div>
-              <button type="submit" class="btn btn-primary" name="findMachine" style="background-color: black; color: white;border-color: white;">Find Nearest Machine</button>
-            </form>
-      
-          </div>
-        </div>
-      </div>
-     <!-- Map End -->
-
-  
 
     <!-- Latest Blog Section Begin -->
-   <div class="cart__discount">
+    <div class="cart__discount">
 
-   </div>
+    </div>
     <!-- Latest Blog Section End -->
 
     <!-- Footer Section Begin -->
-    <?php 
-     include('footer.php')
+    <?php
+    include('footer.php')
     ?>
     <!-- Footer Section End -->
 

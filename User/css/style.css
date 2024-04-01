@@ -246,8 +246,10 @@ a:focus {
 
 ul,
 ol {
+	display: flex;
 	padding: 0;
 	margin: 0;
+
 }
 
 /*---------------------
@@ -314,8 +316,8 @@ ol {
 
 .site-btn {
 	font-size: 14px;
-	color: #ffffff;
-	background: #111111;
+	color: #188DB7;
+	background:  #f8f9fa;
 	font-weight: 700;
 	border: none;
 	text-transform: uppercase;
@@ -474,11 +476,7 @@ body:not(.no-padding) {
 }
 
 .header__top {
-<<<<<<< HEAD
-	background: #e1f6ff;
-=======
-	background: #0b465c;
->>>>>>> 2faad95f948d357e3b72e1fede9fed5e4339bb58
+	background:   #f6f9ff;
 	padding: 10px 0;
 }
 
@@ -562,9 +560,12 @@ body:not(.no-padding) {
 }
 
 .header__logo {
-	padding: 30px 0;
+	padding: 0px 0;
+text-align: left; 
 	
 }
+
+
 
 .header__logo a {
 	display: inline-block;
@@ -2100,7 +2101,7 @@ body:not(.no-padding) {
 -----------------------*/
 
 .footer {
-	background: #0b465c;
+	background-color: #f8f9fa !important;
 	padding-top: 70px;
 }
 
@@ -2117,7 +2118,7 @@ body:not(.no-padding) {
 }
 
 .footer__about p {
-	color: whitesmoke;
+	color:  #8c92a0;;
 	margin-bottom: 30px;
 }
 
@@ -3323,10 +3324,10 @@ body:not(.no-padding) {
 }
 
 .blog__details__comment h4 {
-	color: #333333;
+	color: #188DB7;
 	font-weight: 700;
 	margin-bottom: 35px;
-	text-align: center;
+	text-align: left;
 }
 
 .blog__details__comment form input {
