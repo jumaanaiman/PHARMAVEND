@@ -1,435 +1,293 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Male_Fashion Template">
-    <meta name="keywords" content="Male_Fashion, unica, creative, html">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Male-Fashion | Template</title>
+  <title>PharmaVend</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="icon" href="images/logo.png">
 
-    <!-- Css Styles -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+  <link rel="stylesheet" href="css/aos.css">
+
+  <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
-    <!-- Page Preloder -->
-    <div id="preloder">
-        <div class="loader"></div>
+  <div id="preloader-active">
+    <div class="preloader d-flex align-items-center justify-content-center">
+      <div class="preloader-inner position-relative">
+        <div class="preloader-circle"></div>
+        <div class="preloader-img pere-text">
+          <img src="images/logo.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="site-wrap">
+
+    <!-- <div id="header-user"></div>   -->
+    <?php include('shared/header.php');
+    ?> <div class="bg-light py-7rem">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 mb-0">
+            <a href="index.php">Home</a> <span class="mx-2 mb-0">/</span>
+            <strong class="text-black">About Us</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+    <? $_SESSION['previous_url'] = $_SERVER['REQUEST_URI']; ?>
+    <div class="site-blocks-cover overlay" style="background-image: url('images/slider3.png');">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 mx-auto align-self-center">
+            <div class="site-block-cover-content text-center">
+              <h1 class="mb-0">About PharmaVend</h1>
+              <div class="row justify-content-center mb-5">
+                <div class="col-lg-6 text-center">
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- Offcanvas Menu Begin -->
-    <div class="offcanvas-menu-overlay"></div>
-    <div class="offcanvas-menu-wrapper">
-        <div class="offcanvas__option">
-            <div class="offcanvas__links">
-                <a href="#">Sign in</a>
-                <a href="#">FAQs</a>
+
+
+    <div class="site-section">
+      <div class="container">
+
+        <div class="row justify-content-between">
+
+          <div class="col-lg-5">
+            <div class="title-section">
+              <h2 class="mb-5">About <strong class="text-primary">Us</strong></h2>
+              <div class="step-number d-flex mb-4 align-items-center">
+
+                <div class="ml-3">
+                  <h3 class="text-black h4 mb-0">Who We Are</h3>
+                  <p class="mb-0">
+                    We were inspired by our experiences abroad, we saw how convenient pharmacy vending machines were in developed countries. That's why we launched PHARMAVEND to bring that accessibility home.
+                  </p>
+                </div>
+              </div>
+
+              <div class="step-number d-flex mb-4 align-items-center">
+
+                <div class="ml-3">
+                  <h3 class="text-black h4 mb-0">What We Serve</h3>
+                  <p class="mb-0">
+                    At Pharmavend, we offer a convenient selection of over-the-counter medications, providing quick relief for common ailments without the need for a prescription </p>
+                </div>
+              </div>
+
+              <div class="step-number d-flex mb-4 align-items-center">
+
+                <div class="ml-3">
+                  <h3 class="text-black h4 mb-0">Our Mission</h3>
+                  <p class="mb-0">
+                    Our mission at Pharmavend is simple: to make healthcare products easily accessible whenever and wherever you need them.With us, getting what you need is simple and fast.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="offcanvas__top__hover">
-                <span>Usd <i class="arrow_carrot-down"></i></span>
-                <ul>
-                    <li>USD</li>
-                    <li>EUR</li>
-                    <li>USD</li>
-                </ul>
+          </div>
+          <div class="col-lg-6">
+            <div class="title-section">
+              <h2>Satisfied <strong class="text-primary">Customers</strong></h2>
             </div>
+            <div class="block-3 products-wrap">
+              <div class="owl-single no-direction owl-carousel">
+                <div class="testimony">
+                  <blockquote>
+                    <img src="images/person_3.jpg" alt="Image" class="img-fluid">
+                    <p>&ldquo;I had my doubts about using a vending machine for medications, but Pharma Vend has exceeded my expectations. The interface is user-friendly, and the process is secure. Plus, it's available 24/7, which is incredibly convenient.&rdquo;</p>
+                  </blockquote>
+
+                  <p class="author">&mdash; Osama</p>
+                </div>
+
+                <div class="testimony">
+                  <blockquote>
+                    <img src="images/person_2.jpg" alt="Image" class="img-fluid">
+                    <p>&ldquo;Pharma Vend has made my life so much easier! I can now conveniently refill my prescriptions without having to wait in long lines at the pharmacy. The automated system is quick and efficient.&rdquo;</p>
+                  </blockquote>
+
+                  <p class="author">&mdash; Bashar</p>
+                </div>
+
+                <div class="testimony">
+                  <blockquote>
+                    <img src="images/person_3.jpg" alt="Image" class="img-fluid">
+                    <p>&ldquo;The convenience of Pharma Vend is unmatched. I can refill my prescriptions in just a few minutes, without having to wait in line or deal with paperwork. It's a time-saver and stress-reliever for sure!&rdquo;</p>
+                  </blockquote>
+
+                  <p class="author">&mdash; Khaled</p>
+                </div>
+
+                <div class="testimony">
+                  <blockquote>
+                    <img src="images/person_4.jpg" alt="Image" class="img-fluid">
+                    <p>&ldquo;I appreciate the privacy and discretion that Pharma Vend offers. I can refill my prescriptions without having to interact with pharmacy staff or other customers, which is especially helpful for sensitive medications.&rdquo;</p>
+                  </blockquote>
+
+                  <p class="author">&mdash; Aiman</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="offcanvas__nav__option">
-            <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
-            <a href="#"><img src="img/icon/heart.png" alt=""></a>
-            <a href="#"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
-            <div class="price">$0.00</div>
-        </div>
-        <div id="mobile-menu-wrap"></div>
-        <div class="offcanvas__text">
-            <p>Free shipping, 30-day return or refund guarantee.</p>
-        </div>
+      </div>
     </div>
-    <!-- Offcanvas Menu End -->
 
-    <!-- Header Section Begin -->
-    <header class="header">
-        <div class="header__top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-md-7">
-                        <div class="header__top__left">
-                            <p>Free shipping, 30-day return or refund guarantee.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-5">
-                        <div class="header__top__right">
-                            <div class="header__top__links">
-                                <a href="#">Sign in</a>
-                                <a href="#">FAQs</a>
-                            </div>
-                            <div class="header__top__hover">
-                                <span>Usd <i class="arrow_carrot-down"></i></span>
-                                <ul>
-                                    <li>USD</li>
-                                    <li>EUR</li>
-                                    <li>USD</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-3">
-                    <div class="header__logo">
-                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <nav class="header__menu mobile-menu">
-                        <ul>
-                            <li><a href="./index.html">Home</a></li>
-                            <li><a href="./shop.html">VM</a></li>
-                            <li><a href="#">Pages</a>
-                                <ul class="dropdown">
-                                    <li><a href="./about.html">About Us</a></li>
-                                    <li><a href="./shop-details.html">Shop Details</a></li>
-                                    <li><a href="./shopping-cart.html">Shopping Cart</a></li>
-                                    <li><a href="./checkout.html">Check Out</a></li>
-                                    <li><a href="./blog-details.html">Blog Details</a></li>
-                                </ul>
-                            </li>
-                            <li class="active"><a href="./blog.html">Blog</a></li>
-                            <li><a href="./contact.html">Contacts</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="col-lg-3 col-md-3">
-                    <div class="header__nav__option">
-                        <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
-                        <a href="#"><img src="img/icon/heart.png" alt=""></a>
-                        <a href="#"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
-                        <div class="price">$0.00</div>
-                    </div>
-                </div>
-            </div>
-            <div class="canvas__open"><i class="fa fa-bars"></i></div>
-        </div>
-    </header>
-    <!-- Header Section End -->
 
-    <!-- Breadcrumb Section Begin -->
-    <section class="breadcrumb-option">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="breadcrumb__text">
-                        <h4>About Us</h4>
-                        <div class="breadcrumb__links">
-                            <a href="./index.html">Home</a>
-                            <span>About Us</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Breadcrumb Section End -->
 
-    <!-- About Section Begin -->
-    <section class="about spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="about__pic">
-                        <img src="img/about/about-us.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="about__item">
-                        <h4>Who We Are ?</h4>
-                        <p>Contextual advertising programs sometimes have strict policies that need to be adhered too.
-                        Let’s take Google as an example.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="about__item">
-                        <h4>Who We Do ?</h4>
-                        <p>In this digital generation where information can be easily obtained within seconds, business
-                        cards still have retained their importance.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="about__item">
-                        <h4>Why Choose Us</h4>
-                        <p>A two or three storey house is the ideal way to maximise the piece of earth on which our home
-                        sits, but for older or infirm people.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- About Section End -->
 
-    <!-- Testimonial Section Begin -->
-    <section class="testimonial">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-6 p-0">
-                    <div class="testimonial__text">
-                        <span class="icon_quotations"></span>
-                        <p>“Going out after work? Take your butane curling iron with you to the office, heat it up,
-                            style your hair before you leave the office and you won’t have to make a trip back home.”
-                        </p>
-                        <div class="testimonial__author">
-                            <div class="testimonial__author__pic">
-                                <img src="img/about/testimonial-author.jpg" alt="">
-                            </div>
-                            <div class="testimonial__author__text">
-                                <h5>Augusta Schultz</h5>
-                                <p>Fashion Design</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 p-0">
-                    <div class="testimonial__pic set-bg" data-setbg="img/about/testimonial-pic.jpg"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Testimonial Section End -->
 
-    <!-- Counter Section Begin -->
-    <section class="counter spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="counter__item">
-                        <div class="counter__item__number">
-                            <h2 class="cn_num">102</h2>
-                        </div>
-                        <span>Our <br />Clients</span>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="counter__item">
-                        <div class="counter__item__number">
-                            <h2 class="cn_num">30</h2>
-                        </div>
-                        <span>Total <br />Categories</span>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="counter__item">
-                        <div class="counter__item__number">
-                            <h2 class="cn_num">102</h2>
-                        </div>
-                        <span>In <br />Country</span>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="counter__item">
-                        <div class="counter__item__number">
-                            <h2 class="cn_num">98</h2>
-                            <strong>%</strong>
-                        </div>
-                        <span>Happy <br />Customer</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Counter Section End -->
 
-    <!-- Team Section Begin -->
-    <section class="team spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title">
-                        <span>Our Team</span>
-                        <h2>Meet Our Team</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="team__item">
-                        <img src="img/about/team-1.jpg" alt="">
-                        <h4>John Smith</h4>
-                        <span>Fashion Design</span>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="team__item">
-                        <img src="img/about/team-2.jpg" alt="">
-                        <h4>Christine Wise</h4>
-                        <span>C.E.O</span>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="team__item">
-                        <img src="img/about/team-3.jpg" alt="">
-                        <h4>Sean Robbins</h4>
-                        <span>Manager</span>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="team__item">
-                        <img src="img/about/team-4.jpg" alt="">
-                        <h4>Lucy Myers</h4>
-                        <span>Delivery</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Team Section End -->
 
-    <!-- Client Section Begin -->
-    <section class="clients spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title">
-                        <span>Partner</span>
-                        <h2>Happy Clients</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-3 col-md-4 col-sm-4 col-6">
-                    <a href="#" class="client__item"><img src="img/clients/client-1.png" alt=""></a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-4 col-6">
-                    <a href="#" class="client__item"><img src="img/clients/client-2.png" alt=""></a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-4 col-6">
-                    <a href="#" class="client__item"><img src="img/clients/client-3.png" alt=""></a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-4 col-6">
-                    <a href="#" class="client__item"><img src="img/clients/client-4.png" alt=""></a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-4 col-6">
-                    <a href="#" class="client__item"><img src="img/clients/client-5.png" alt=""></a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-4 col-6">
-                    <a href="#" class="client__item"><img src="img/clients/client-6.png" alt=""></a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-4 col-6">
-                    <a href="#" class="client__item"><img src="img/clients/client-7.png" alt=""></a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-4 col-6">
-                    <a href="#" class="client__item"><img src="img/clients/client-8.png" alt=""></a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Client Section End -->
 
-    <!-- Footer Section Begin -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="footer__about">
-                        <div class="footer__logo">
-                            <a href="#"><img src="img/footer-logo.png" alt=""></a>
-                        </div>
-                        <p>The customer is at the heart of our unique business model, which includes design.</p>
-                        <a href="#"><img src="img/payment.png" alt=""></a>
-                    </div>
-                </div>
-                <div class="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
-                    <div class="footer__widget">
-                        <h6>Shopping</h6>
-                        <ul>
-                            <li><a href="#">Clothing Store</a></li>
-                            <li><a href="#">Trending Shoes</a></li>
-                            <li><a href="#">Accessories</a></li>
-                            <li><a href="#">Sale</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-3 col-sm-6">
-                    <div class="footer__widget">
-                        <h6>Shopping</h6>
-                        <ul>
-                            <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">Payment Methods</a></li>
-                            <li><a href="#">Delivary</a></li>
-                            <li><a href="#">Return & Exchanges</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 offset-lg-1 col-md-6 col-sm-6">
-                    <div class="footer__widget">
-                        <h6>NewLetter</h6>
-                        <div class="footer__newslatter">
-                            <p>Be the first to know about new arrivals, look books, sales & promos!</p>
-                            <form action="#">
-                                <input type="text" placeholder="Your email">
-                                <button type="submit"><span class="icon_mail_alt"></span></button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="footer__copyright__text">
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        <p>Copyright ©
-                            <script>
-                                document.write(new Date().getFullYear());
-                            </script>2020
-                            All rights reserved | This template is made with <i class="fa fa-heart-o"
-                            aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                        </p>
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- Footer Section End -->
 
-    <!-- Search Begin -->
-    <div class="search-model">
-        <div class="h-100 d-flex align-items-center justify-content-center">
-            <div class="search-close-switch">+</div>
-            <form class="search-model-form">
-                <input type="text" id="search-input" placeholder="Search here.....">
-            </form>
+
+
+
+
+
+
+
+
+    <div class="site-section bg-light custom-border-bottom" data-aos="fade">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+
+
+          <div class="title-section text-center col-md-7">
+            <h2>Our <strong class="text-primary">Team</strong></h2>
+          </div>
+
         </div>
+        <!DOCTYPE html>
+        <html lang="en">
+
+        <head>
+          <title>Your Title</title>
+          <!-- Your other meta tags and links to CSS files -->
+          <style>
+            .block-38-img img {
+              height: 200px;
+              /* Adjust as needed */
+              width: auto;
+              /* Maintain aspect ratio */
+            }
+          </style>
+        </head>
+
+        <body>
+          <div class="row">
+            <div class="col-md-6 col-lg-4 mb-5">
+              <div class="block-38 text-center">
+                <div class="block-38-img">
+                  <div class="block-38-header">
+                    <img src="images/person_33.jpg" alt="Image placeholder" class="mb-4">
+                    <h3 class="block-38-heading h4">Jumanah Mukheimar</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Repeat the same structure for other columns -->
+
+            <div class="col-md-6 col-lg-4 mb-5">
+              <div class="block-38 text-center">
+                <div class="block-38-img">
+                  <div class="block-38-header">
+                    <img src="images/DALYA.png" alt="Image placeholder" class="mb-4">
+                    <h3 class="block-38-heading h4">Dalya Kharbasheh</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 mb-5">
+              <div class="block-38 text-center">
+                <div class="block-38-img">
+                  <div class="block-38-header">
+                    <img src="images/MALAK.png" alt="Image placeholder" class="mb-4">
+                    <h3 class="block-38-heading h4">Malak Shamout</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 mb-5">
+              <!-- Empty column -->
+            </div>
+
+            <div class="col-md-6 col-lg-4 mb-5">
+              <div class="block-38 text-center">
+                <div class="block-38-img">
+                  <div class="block-38-header">
+                    <img src="images/RUBA.png" alt="Image placeholder" class="mb-4">
+                    <h3 class="block-38-heading h4">Ruba Awad</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 mb-5">
+              <!-- Empty column -->
+            </div>
+
+          </div>
+          <!-- Your other HTML content -->
+        </body>
+
+        </html>
+
+      </div>
     </div>
-    <!-- Search End -->
 
-    <!-- Js Plugins -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.nice-select.min.js"></script>
-    <script src="js/jquery.nicescroll.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/jquery.countdown.min.js"></script>
-    <script src="js/jquery.slicknav.js"></script>
-    <script src="js/mixitup.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/main.js"></script>
+
+
+
+
+
+    <!-- <div id="footer-user"></div> -->
+    <?php include('shared/footer.php'); ?>
+  </div>
+  <script src="https://browser.sentry-cdn.com/7.109.0/bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" integrity="sha384-k6v7j5l6eUzJBax4vf8I9QTQH/Z/8FnQgSqDzQdCx2fpBX5DaSk3/e7a6CoHQU5N" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+
+  <script src="js/main.js"></script>
+  <script src="js/shared.js"></script>
 </body>
 
 </html>

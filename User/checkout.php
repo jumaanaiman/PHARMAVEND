@@ -1,311 +1,207 @@
-<DOCTYPE html>
-    <html lang="zxx">
+<?php
+require_once '../Config/vm.php';
+?>
+<!DOCTYPE html>
+<html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="description" content="Male_Fashion Template">
-        <meta name="keywords" content="Male_Fashion, unica, creative, html">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Male-Fashion | Template</title>
+<head>
+  <title>PharmaVend </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="images/logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/aos.css">
 
-        <!-- Google Font -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
 
-        <!-- Css Styles -->
-        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-        <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-        <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
-        <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-        <link rel="stylesheet" href="css/nice-select.css" type="text/css">
-        <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-        <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-        <link rel="stylesheet" href="css/style.css" type="text/css">
-    </head>
+<body>
 
-    <body>
-        <!-- Page Preloder -->
-        <div id="preloder">
-            <div class="loader"></div>
+  <div class="site-wrap">
+
+    <?php include('shared/header.php');
+    ?>
+
+    <div class="bg-light py-7rem">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 mb-0">
+            <a href="index.php">Home</a> <span class="mx-2 mb-0">/</span>
+            <a href="cart.php">Cart</a> <span class="mx-2 mb-0">/</span>
+            <strong class="text-black">Checkout</strong>
+          </div>
         </div>
+      </div>
+    </div>
 
-        <!-- Offcanvas Menu Begin -->
-        <div class="offcanvas-menu-overlay"></div>
-        <div class="offcanvas-menu-wrapper">
-            <div class="offcanvas__option">
-                <div class="offcanvas__links">
-                    <a href="#">Sign in</a>
-                    <a href="#">FAQs</a>
+    <div class="site-section">
+      <div class="container">
+
+        <div class="row justify-content-center align-items-center" style="min-height: 70vh;">
+
+          <div class="col-md-6">
+
+            <div class="d-flex align-items-center justify-content-center">
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-md-12">
+                    <div class="row mb-5">
+                      <div class="col-md-12">
+                        <h2 class="h3 mb-3 text-black">Your Order</h2>
+                        <div class="p-3 p-lg-5 border">
+                          <table class="table site-block-order-table mb-5">
+                            <thead>
+                              <tr>
+                                <th>Product</th>
+                                <th>Total</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <?php
+                              // Assuming you already have session_start() and getCartDetailsByUserId() function defined
+
+                              // Retrieve cart items
+                              $cartItems = getCartDetailsByUserId($_SESSION['user_id']);
+                              $total = 0;
+                              if (!is_null($cartItems) && count($cartItems) > 0) {
+                                $firstItem = $cartItems[0];  // Access the first item in the array
+                                if (!is_null($firstItem) && is_array($firstItem)) {
+                                  $machineId = $firstItem['machine_id'];  // Extract the machine_id
+                                  foreach ($cartItems as $item) : ?>
+                                    <tr>
+                                      <td><?= htmlspecialchars($item['name']) ?> <strong class="mx-2">x</strong> <?= $item['quantity'] ?></td>
+                                      <td>$<?= number_format($item['totalAmount'], 2) ?></td>
+                                    </tr>
+                                    <?php $total += $item['totalAmount'] * $item['quantity']; ?>
+                              <?php endforeach;
+                                } else {
+                                  $machineId = null;
+                                  echo "Your cart seems to have an unexpected format."; // Improved message for clarity
+                                }
+                              } else {
+                                echo "Your cart is empty."; // This handles the case where $cartItems is null or empty
+                              }
+                              ?>
+
+                              <tr>
+                                <td class="text-black font-weight-bold"><strong>Order Total</strong></td>
+                                <td class="text-black font-weight-bold"><strong>$<?= number_format($total, 2) ?></strong></td>
+                              </tr>
+
+                            </tbody>
+                          </table>
+
+                          <p>Product information <span style="color: #999; font-size: 14px;">(Prices shown include applicable taxes.)</span></p>
+
+
+                          <div class="form-group">
+                            <button type="submit" class="btn btn-success" name="check_out_btn" style="display: none;">Checkout</button>
+                            <div id="paypal-button-container" class="mt-3"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="offcanvas__top__hover">
-                    <span>Usd <i class="arrow_carrot-down"></i></span>
-                    <ul>
-                        <li>USD</li>
-                        <li>EUR</li>
-                        <li>USD</li>
-                    </ul>
-                </div>
+              </div>
             </div>
-            <div class="offcanvas__nav__option">
-                <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
-                <a href="#"><img src="img/icon/heart.png" alt=""></a>
-                <a href="#"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
-                <div class="price">$0.00</div>
-            </div>
-            <div id="mobile-menu-wrap"></div>
-            <div class="offcanvas__text">
-                <p>Free shipping, 30-day return or refund guarantee.</p>
-            </div>
+
+          </div>
         </div>
-        <!-- Offcanvas Menu End -->
+      </div>
+    </div>
 
-        <!-- Header Section Begin -->
-        <header class="header">
-            <div class="header__top">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-7">
-                            <div class="header__top__left">
-                                <p>Free shipping, 30-day return or refund guarantee.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-5">
-                            <div class="header__top__right">
-                                <div class="header__top__links">
-                                    <a href="#">Sign in</a>
-                                    <a href="#">FAQs</a>
-                                </div>
-                                <div class="header__top__hover">
-                                    <span>Usd <i class="arrow_carrot-down"></i></span>
-                                    <ul>
-                                        <li>USD</li>
-                                        <li>EUR</li>
-                                        <li>USD</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-3">
-                        <div class="header__logo">
-                            <a href="./index.html"><img src="img/logo.png" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <nav class="header__menu mobile-menu">
-                            <ul>
-                                <li><a href="./index.html">Home</a></li>
-                                <li class="active"><a href="./shop.html">VM</a></li>
-                                <li><a href="#">Pages</a>
-                                    <ul class="dropdown">
-                                        <li><a href="./about.html">About Us</a></li>
-                                        <li><a href="./shop-details.html">Shop Details</a></li>
-                                        <li><a href="./shopping-cart.html">Shopping Cart</a></li>
-                                        <li><a href="./checkout.html">Check Out</a></li>
-                                        <li><a href="./blog-details.html">Blog Details</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="./blog.html">Blog</a></li>
-                                <li><a href="./contact.html">Contacts</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="col-lg-3 col-md-3">
-                        <div class="header__nav__option">
-                            <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
-                            <a href="#"><img src="img/icon/heart.png" alt=""></a>
-                            <a href="#"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
-                            <div class="price">$0.00</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="canvas__open"><i class="fa fa-bars"></i></div>
-            </div>
-        </header>
-        <!-- Header Section End -->
 
-        <!-- Breadcrumb Section Begin -->
-        <section class="breadcrumb-option">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="breadcrumb__text">
-                            <h4>Check Out</h4>
-                            <div class="breadcrumb__links">
-                                <a href="./index.html">Home</a>
-                                <a href="./shop.html">Shop</a>
-                                <span>Check Out</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Breadcrumb Section End -->
+    <?php include('shared/footer.php'); ?>
+  </div>
 
-        <!-- Checkout Section Begin -->
-        <section class="checkout spad">
-            <div class="container">
-                <div class="checkout__form">
-                    <form action="#">
-                        <div class="row">
-                            <div class="col-lg-8 col-md-6">
-                                <h6 class="coupon__code"><span class="icon_tag_alt"></span> Have a coupon? <a href="#">Click
-                                        here</a> to enter your code</h6>
-                                <h6 class="checkout__title">Billing Details</h6>
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="checkout__input">
-                                            <p>Fist Name<span>*</span></p>
-                                            <input type="text">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="checkout__input">
-                                            <p>Last Name<span>*</span></p>
-                                            <input type="text">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="checkout__input">
-                                    <p>Country<span>*</span></p>
-                                    <input type="text">
-                                </div>
-                                <div class="checkout__input">
-                                    <p>Address<span>*</span></p>
-                                    <input type="text" placeholder="Street Address" class="checkout__input__add">
-                                    <input type="text" placeholder="Apartment, suite, unite ect (optinal)">
-                                </div>
-                                <div class="checkout__input">
-                                    <p>Town/City<span>*</span></p>
-                                    <input type="text">
-                                </div>
-                                <div class="checkout__input">
-                                    <p>Country/State<span>*</span></p>
-                                    <input type="text">
-                                </div>
-                                <div class="checkout__input">
-                                    <p>Postcode / ZIP<span>*</span></p>
-                                    <input type="text">
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="checkout__input">
-                                            <p>Phone<span>*</span></p>
-                                            <input type="text">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="checkout__input">
-                                            <p>Email<span>*</span></p>
-                                            <input type="text">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="checkout__input__checkbox">
-                                    <label for="acc">
-                                        Create an account?
-                                        <input type="checkbox" id="acc">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <p>Create an account by entering the information below. If you are a returning customer
-                                        please login at the top of the page</p>
-                                </div>
-                                <div class="checkout__input">
-                                    <p>Account Password<span>*</span></p>
-                                    <input type="text">
-                                </div>
-                                <div class="checkout__input__checkbox">
-                                    <label for="diff-acc">
-                                        Note about your order, e.g, special noe for delivery
-                                        <input type="checkbox" id="diff-acc">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </div>
-                                <div class="checkout__input">
-                                    <p>Order notes<span>*</span></p>
-                                    <input type="text" placeholder="Notes about your order, e.g. special notes for delivery.">
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <div class="checkout__order">
-                                    <h4 class="order__title">Your order</h4>
-                                    <div class="checkout__order__products">Product <span>Total</span></div>
-                                    <ul class="checkout__total__products">
-                                        <li>01. Vanilla salted caramel <span>$ 300.0</span></li>
-                                        <li>02. German chocolate <span>$ 170.0</span></li>
-                                        <li>03. Sweet autumn <span>$ 170.0</span></li>
-                                        <li>04. Cluten free mini dozen <span>$ 110.0</span></li>
-                                    </ul>
-                                    <ul class="checkout__total__all">
-                                        <li>Subtotal <span>$750.99</span></li>
-                                        <li>Total <span>$750.99</span></li>
-                                    </ul>
-                                    <div class="checkout__input__checkbox">
-                                        <label for="acc-or">
-                                            Create an account?
-                                            <input type="checkbox" id="acc-or">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adip elit, sed do eiusmod tempor incididunt
-                                        ut labore et dolore magna aliqua.</p>
-                                    <div class="checkout__input__checkbox">
-                                        <label for="payment">
-                                            Check Payment
-                                            <input type="checkbox" id="payment">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div>
-                                    <div class="checkout__input__checkbox">
-                                        <label for="paypal">
-                                            Paypal
-                                            <input type="checkbox" id="paypal">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div>
-                                    <button type="submit" class="site-btn">PLACE ORDER</button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-        <!-- Checkout Section End -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <!-- Replace "test" with your own sandbox Business account app client ID -->
+  <script src="https://www.paypal.com/sdk/js?client-id=AShNYaBVlK9-fD2nR_eBe4z3FnLOzMH-b4p-WfH_8JQXpyOsh9VkrTT27tafEu6khIomICUKDSmUNra-"></script>
+  <script>
+    // JavaScript to handle payment method selection
+    // document.getElementById('payOrderBtn').addEventListener('click', function() {
+    //   // Hide the "Pay Order" button
+    //   this.style.display = 'none';
+    //   // Show the payment method section
+    //   document.getElementById('paymentMethodSection').style.display = 'block';
+    // });
+  </script>
+  <script>
+    var jsTotal = <?= json_encode($total, JSON_NUMERIC_CHECK); ?>;
+    var jsUserId = <?= json_encode($_SESSION['user_id'], JSON_NUMERIC_CHECK); ?>;
+    var jsMachineId = <?= json_encode($machineId, JSON_NUMERIC_CHECK); ?>; // Now correctly passing $machineId
+    console.log("Total: ", jsTotal);
+    console.log("User ID: ", jsUserId);
+    console.log("Machine ID: ", jsMachineId);
+  </script>
+  <script>
+    paypal.Buttons({
+      onClick() {
 
-        <!-- Footer Section Begin -->
-        <?php
-        include('footer.php')
-        ?>
-        <!-- Footer Section End -->
+      },
 
-        <!-- Search Begin -->
-        <div class="search-model">
-            <div class="h-100 d-flex align-items-center justify-content-center">
-                <div class="search-close-switch">+</div>
-                <form class="search-model-form">
-                    <input type="text" id="search-input" placeholder="Search here.....">
-                </form>
-            </div>
-        </div>
-        <!-- Search End -->
+      createOrder: (data, actions) => {
+        return actions.order.create({
+          purchase_units: [{
+            amount: {
+              value: jsTotal.toString(),
+              currency_code: 'USD'
+            }
+          }]
+        });
+      },
+      onApprove: (data, actions) => {
+        return actions.order.capture().then(function(orderData) {
+          const transaction = orderData.purchase_units[0].payments.captures[0];
+          console.log(orderData)
+          if (transaction.status === "COMPLETED") {
+            const body = JSON.stringify({
+              userId: jsUserId.toString(),
+              amount: orderData.purchase_units[0].amount.value,
+              paymentStatus: orderData.status,
+              paymentMethod: '1',
+              machineId: jsMachineId.toString()
+            })
+            fetch('../Config/processPayment.php', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json'
+                },
+                body: body
+              }).then(response => response.json())
+              .then(data => {
+                console.log('Success:', data);
+                if (data.status == 'success') {
+                  window.location.href = 'thankyou.php?status=1';
+                } else {
+                  window.location.href = 'thankyou.php?status=2';
+                }
+                // window.location.href = 'thankyou.php'; // Redirect after processing
+              });
+          } else {
+            window.location.href = 'thankyou.php?status=2';
+          }
+        });
+      }
+    }).render('#paypal-button-container');
+  </script>
+  <script src="js/main.js"></script>
 
-        <!-- Js Plugins -->
-        <script src="js/jquery-3.3.1.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/jquery.nice-select.min.js"></script>
-        <script src="js/jquery.nicescroll.min.js"></script>
-        <script src="js/jquery.magnific-popup.min.js"></script>
-        <script src="js/jquery.countdown.min.js"></script>
-        <script src="js/jquery.slicknav.js"></script>
-        <script src="js/mixitup.min.js"></script>
-        <script src="js/owl.carousel.min.js"></script>
-        <script src="js/main.js"></script>
-    </body>
+</body>
 
-    </html>
+</html>
